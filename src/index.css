@@ -1,5 +1,46 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.logo{
+  height: 25px;
+}
+
+body.capture{ 
+  background: url("https://source.unsplash.com/random") no-repeat center center fixed; 
+  height: 100vh;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.navBar{
+  background-color: rgba(255, 255, 255, 0.5);
+  height: 33px;
+  width: 100%;
+  border: 0;
+  padding: 0;
+}
+
+.buttonBox{
+  width: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 0;
+}
+
+.button{
+  margin-right: 5px;
+}
+
+h1{
+  color: white;
+  font-size: 3.2vmax;
+  -webkit-text-stroke: 2px black;
+  text-shadow: 2px 2px black;
+  padding: 35vh 0;
+  text-align: center;
 }
