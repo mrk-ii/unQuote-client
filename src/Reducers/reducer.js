@@ -19,7 +19,7 @@ export const fetchQuoteReducer = (state=initialState, action) =>{
     }
     else if (action.type === FETCH_QUOTE_SUCCESS){
         return Object.assign({}, state, {
-            quote: action.quote,
+            quote: action.fetchedQuote,
             loading: false,
             error: null
         });

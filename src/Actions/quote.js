@@ -6,9 +6,9 @@ export const fetchQuoteRequest = () => ({
 });
 
 export const FETCH_QUOTE_SUCCESS = 'FETCH_QUOTE_SUCCESS';
-export const fetchQuoteSuccess = (quote) => ({
+export const fetchQuoteSuccess = (fetchedQuote) => ({
     type: FETCH_QUOTE_SUCCESS,
-    quote
+    fetchedQuote
 });
 
 export const FETCH_QUOTE_ERROR = 'FETCH_QUOTE_ERROR';

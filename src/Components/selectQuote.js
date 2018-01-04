@@ -35,7 +35,7 @@ export class Quotes extends React.Component {
                 <a href="meme.html"><button type="button" className="button">Rate Meme</button></a>
             </fieldset>
         </form>
-          <div>{this.props.quote}</div>
+          <div>{this.props.fetchedQuote}</div>
       </div>      
     )
   }
