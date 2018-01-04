@@ -2,8 +2,9 @@ import React from "react";
 import {connect} from 'react-redux';
 import {fetchQuotes} from '../Actions/quote';
 import {fetchImg} from '../Actions/img';
+// import StarRating from 'react-star-rating';
 
-export class Quotes extends React.Component {
+export class Meme extends React.Component {
   componentDidMount(){
     this.props.dispatch(fetchQuotes());
     this.props.dispatch(fetchImg());
@@ -13,11 +14,15 @@ export class Quotes extends React.Component {
 
   render(){
     return(
+      
         <div className="capture">
           <form className="navBar">
               <fieldset className="buttonBox">
                   <a href="pictures.html"><button type="button" className="button">New Meme</button></a>
-                  <a href="meme.html"><button type="button" className="button">Rate Meme</button></a>
+                  {/* <form action="/api" method="POST">
+                    <StarRating name="meme-rating" caption="Rate this meme!" totalStars={5} />
+                    <button type="submit" className="btn btn-submit">Submit Rating</button>
+                  </form> */}
               </fieldset>
           </form>
           <h1>
@@ -38,5 +43,4 @@ const mapStateToProps = state => {
   error: state.error
 }};
   
-export default connect(mapStateToProps)(Quotes);
-
+export default connect(mapStateToProps)(Meme);

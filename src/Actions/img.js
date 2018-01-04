@@ -1,4 +1,4 @@
-import {API_BASE_URL} from '../config';
+// import {API_BASE_URL} from '../config';
 
 export const FETCH_IMG_REQUEST = 'FETCH_IMG_REQUEST';
 export const fetchImgRequest = () => ({
