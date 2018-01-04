@@ -27,7 +27,7 @@ export class Quotes extends React.Component {
 
   render(){
     return(
-      <div className="container">
+      // <div className="container">
         <div className="capture">
           <form className="navBar">
               {/* <img className="logo" alt="UnQuote logo" src="./images/UnQuote_logo.png"/> */}
@@ -43,7 +43,7 @@ export class Quotes extends React.Component {
               </div>
           </h1>
         </div>
-      </div>      
+      // </div>      
     )
   }
 }
