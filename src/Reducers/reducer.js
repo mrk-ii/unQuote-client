@@ -5,7 +5,7 @@ import {
 } from '../Actions/quote';
 
 const initialState = {
-    quotes: [],
+    quote: [],
     loading: false,
     error: null
 };
@@ -19,7 +19,7 @@ export const fetchQuoteReducer = (state=initialState, action) =>{
     }
     else if (action.type === FETCH_QUOTE_SUCCESS){
         return Object.assign({}, state, {
-            quotes: action.quotes,
+            quote: action.quote,
             loading: false,
             error: null
         });
