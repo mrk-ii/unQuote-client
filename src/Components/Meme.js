@@ -29,11 +29,10 @@ export class Meme extends React.Component {
 
    render(){
     return(
-      
         <div className="capture">
           <form className="navBar">
               <fieldset className="buttonBox">
-                  <a href="pictures.html"><button type="button" className="button">New Meme</button></a>
+                  <a href="pictures.html"><button type="button" className="button">Shuffle</button></a>
                   {/* <form action="/api" method="POST">
                     <StarRating name="meme-rating" caption="Rate this meme!" totalStars={5} />
                     <button type="submit" className="btn btn-submit">Submit Rating</button>

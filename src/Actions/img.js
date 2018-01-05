@@ -33,7 +33,7 @@ export const fetchImg = () => dispatch => {
             console.log(json.user.name, json.user.links.html, json.urls.regular, 'img.js - line 33');
         })
         .then(res =>{
-            console.log(res, 'img.js - line 36');
+            console.log(res, 'img.js - line 36'); //console.log results undefined
             if(!res.ok) {
                 throw new Error(res.statusTest);
             }
