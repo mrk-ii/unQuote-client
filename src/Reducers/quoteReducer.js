@@ -12,12 +12,14 @@ const initialState = {
 
 export const fetchQuoteReducer = (state=initialState, action) =>{
     if (action.type === FETCH_QUOTE_REQUEST){
+        console.log('quote: working . . .');
         return Object.assign({}, state, {
             quoteLoading: true,
             quoteError: null
         });
     }
     else if (action.type === FETCH_QUOTE_SUCCESS){
+        console.log('quote: success');
         return Object.assign({}, state, {
             quote: action.fetchedQuote,
             quoteLoading: false,
@@ -25,6 +27,7 @@ export const fetchQuoteReducer = (state=initialState, action) =>{
         });
     }
     else if (action.type === FETCH_QUOTE_ERROR){
+        console.log('quote: error');
         return Object.assign({}, state, {
             quoteLoading: false,
             quoteError: action.error

@@ -5,30 +5,37 @@ import {
 } from '../Actions/img';
 
 const initialState = {
-  img: {},
-  imgLoading: false,
-  imgError: null
+    photographerName: '',
+    photographerUrl: '',
+    img: '',
+    imgLoading: false,
+    imgError: null
 };
 
 export const fetchImgReducer = (state=initialState, action) =>{
   if (action.type === FETCH_IMG_REQUEST){
-      return Object.assign({}, state, {
-          imgLoading: true,
-          imgError: null
-      });
+        console.log('img: working . . .');
+        return Object.assign({}, state, {
+            imgLoading: true,
+            imgError: null
+        });
   }
   else if (action.type === FETCH_IMG_SUCCESS){
-      return Object.assign({}, state, {
-          img: action.fetchedImg,
-          imgLoading: false,
-          imgError: null
-      });
+        console.log('img: success');
+        return Object.assign({}, state, {
+            photographerName: action.fetchedPhotographerName,
+            photographerUrl: action.fetchedPhotographerUrl,
+            img: action.fetchedImg,            
+            imgLoading: false,
+            imgError: null
+        });
   }
   else if (action.type === FETCH_IMG_ERROR){
-      return Object.assign({}, state, {
-          imgLoading: false,
-          imgError: action.error
-      });
+        console.log('img: error');
+        return Object.assign({}, state, {
+            imgLoading: false,
+            imgError: action.error
+        });
   }
   return state;
 }

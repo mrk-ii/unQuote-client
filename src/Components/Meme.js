@@ -28,8 +28,11 @@ export class Meme extends React.Component {
 
 
    render(){
+
+console.log(this.props.img);
+
     return(
-        <div className="capture">
+        <div className="capture" style={{backgroundImage: `url(${this.props.img})`}}>        
           <form className="navBar">
               <fieldset className="buttonBox">
                   <a href="pictures.html"><button type="button" className="button">Shuffle</button></a>
@@ -42,7 +45,7 @@ export class Meme extends React.Component {
           <h1>
               <div className="memeText">
                 <div className="quoteText">{this.props.quote.quote}</div> 
-                <div className="authorText">— {(this.props.quote.author !== '') ? this.props.quote.author : 'Anonymous'}</div>
+                <div className="authorText">— {(this.props.quote.author !== '') ? this.props.quote.author : 'Anonymous'}</div>                                
               </div>
           </h1>
         </div>
@@ -54,10 +57,11 @@ const mapStateToProps = state => {
   return{
   quote: state.quote.quote,
   quoteLoading: state.loading,
-  quoteError: state.error,  
+  quoteError: state.error,
   img: state.img.img,
   imgLoading: state.loading,
   imgError: state.error
 }};
-  
+
 export default connect(mapStateToProps)(Meme);
+
