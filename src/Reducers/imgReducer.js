@@ -23,8 +23,8 @@ export const fetchImgReducer = (state=initialState, action) =>{
   else if (action.type === FETCH_IMG_SUCCESS){
         console.log('img: success');
         return Object.assign({}, state, {
-            photographerName: action.fetchedPhotographerName,
-            photographerUrl: action.fetchedPhotographerUrl,
+            photographerName: action.photographerName,
+            photographerUrl: action.photographerUrl,
             img: action.fetchedImg,            
             imgLoading: false,
             imgError: null

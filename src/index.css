@@ -12,7 +12,6 @@ body {
 }
 
 .capture{ 
-  /* background: url("https://source.unsplash.com/random") no-repeat center center fixed;  */
   background: no-repeat center center fixed;
   height: 100vh;
   -webkit-background-size: cover;
