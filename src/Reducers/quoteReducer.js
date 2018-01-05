@@ -6,28 +6,28 @@ import {
 
 const initialState = {
     quote: [],
-    loading: false,
-    error: null
+    quoteLoading: false,
+    quoteError: null
 };
 
 export const fetchQuoteReducer = (state=initialState, action) =>{
     if (action.type === FETCH_QUOTE_REQUEST){
         return Object.assign({}, state, {
-            loading: true,
-            error: null
+            quoteLoading: true,
+            quoteError: null
         });
     }
     else if (action.type === FETCH_QUOTE_SUCCESS){
         return Object.assign({}, state, {
             quote: action.fetchedQuote,
-            loading: false,
-            error: null
+            quoteLoading: false,
+            quoteError: null
         });
     }
     else if (action.type === FETCH_QUOTE_ERROR){
         return Object.assign({}, state, {
-            error: action.error,
-            loading: false
+            quoteLoading: false,
+            quoteError: action.error
         });
     }
     return state;
